@@ -25,8 +25,8 @@ public class Reservation {
     int days;
 
     @ManyToMany
-    @JoinColumn(name="room_id")
-    List<Room> room;
+            @JoinTable(name ="reservation_room", joinColumns = @JoinColumn(name = "reservation_id", referencedColumnName = "reservationID"), inverseJoinColumns=@JoinColumn(name="room_id", referencedColumnName = "room_id"))
+    List<Room> rooms;
 
     @Column(name="price_per_day")
     int pricePerDay;

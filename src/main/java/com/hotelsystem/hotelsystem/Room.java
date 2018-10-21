@@ -12,14 +12,14 @@ public class Room {
     @Column(name="city")
     String City;
 
-    @ManyToMany(mappedBy="room_id")
+    @ManyToMany(mappedBy="rooms")
     List<Reservation> reservationList;
 
-    /*jak zmapowac liste w SQL?*/
 
 
 
-    @Column(name="room  _id")
+
+    @Column(name="room_id")
     int room_id;
 
 }

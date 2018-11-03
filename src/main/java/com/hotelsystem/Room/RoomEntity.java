@@ -1,23 +1,21 @@
-package com.hotelsystem.hotelsystem;
+package com.hotelsystem.Room;
+
+import com.hotelsystem.Reservation.ReservationEntity;
 
 import javax.persistence.Column;
 import javax.persistence.ManyToMany;
 import java.util.List;
 
-public class Room {
+public class RoomEntity {
 
     @Column(name="price")
-    int Price;
+    int price;
 
     @Column(name="city")
-    String City;
+    String city;
 
     @ManyToMany(mappedBy="rooms")
-    List<Reservation> reservationList;
-
-
-
-
+    List<ReservationEntity> reservationList;
 
     @Column(name="room_id")
     int room_id;

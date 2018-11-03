@@ -1,12 +1,13 @@
-package com.hotelsystem.hotelsystem;
+package com.hotelsystem.Customer;
+
+import com.hotelsystem.Reservation.ReservationEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import java.util.List;
 
-public class Customer {
+public class CustomerEntity {
 
     @Id
     @Column(name="customer_id")
@@ -20,6 +21,6 @@ public class Customer {
 
     @OneToMany
     @JoinColumn(name="reservation_id")
-    Reservation reservation;
+    ReservationEntity reservation;
 
 }
